@@ -11,7 +11,7 @@ local function versionCheckPrint(_type, log)
 end
 
 local function CheckVersion()
-    PerformHttpRequest('', function(err, text, headers)
+    PerformHttpRequest('https://raw.githubusercontent.com/SMDX-RedM-Framework/smdx-bossmenu/main/version.txt', function(err, text, headers)
         local currentVersion = GetResourceMetadata(GetCurrentResourceName(), 'version')
 
         if not text then 
